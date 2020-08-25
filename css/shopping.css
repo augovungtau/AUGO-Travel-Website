@@ -93,6 +93,7 @@ font-size: 36px;
     align-items: center;
     padding-top: 50px;
     text-align: center;
+    font-family: Helvetica Neue;
 }
 /* Three columns side by side */
 .column {
@@ -119,15 +120,19 @@ font-size: 36px;
 /* Some left and right padding inside the container */
 .container {
   padding: 0 16px;
+    font-family: Helvetica Neue;
 }
-
 /* Clear floats */
 .container::after, .row::after {
   content: "";
   clear: both;
   display: table;
 }
-
+.chu
+{
+    color: #FF4500;
+    font-family: Montserrat;
+}
 .title {
   color: grey;
 text-align: center;
@@ -274,7 +279,7 @@ float: left;
 {
     .container
     {
-    padding-top: 20px;
+        padding-top: 20px;
     }
     .mySlides
     {
