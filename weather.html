@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Weather</title>
+    <link href="css/weather.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" style="border: none" onclick="closeNav()">&times;</a>
+                <a href="index.html"><i class="fa fa-home fa-fw" style="font-size:15px"></i> Trang Chủ</a>
+              <a href="info.html"><i class="fas fa-atlas fa-fw" style="font-size:15px"></i> Thông Tin Chung</a>
+                <a href="aboutus.html"><i class="fas fa-user-alt fa-fw" style="font-size:15px"></i> Về Au Go!</a>
+                <a href="tour.html"><i class="fas fa-map-signs fa-fw" style="font-size:15px"></i> Tour Du Lịch</a>
+            </div>
+        <div class="header">
+             <div class="icon-bar">
+                <a href="#"><i class="fa fa-navicon" style="font-size:20px" onClick="openNav()"></i></a> 
+                  <a class="active" href="index.html"><img src="images/logo.png" alt="" width="28" height="24"></a> 
+                  <a href="#"><i class="fa fa-arrow-left" style="font-size:20px" onclick="goBack()"></i></a>  
+            </div>
+            <div class="icon-bar2">
+                     <a class="active2" href="contact.html"><i class="fa fa-phone" style="font-size:20px"></i></a>
+                    <a href="shopping.html"><i class="fas fa-shopping-cart" style="font-size:20px"></i></a>  
+            </div>   
+            </div>
+			<div class="container">
+            <div class="vitri">
+                <a href="#"><i class="fa fa-angle-double-left" style="font-size:24px"></i></a> 
+                <span class="foodnav">Thời tiết</span>
+                
+                </div>
+            <div class="infomation">
+                <br>
+            <span class="title">Thời Tiết</span>
+                <br>
+                <br>
+            <span class="paragraph">Bà Rịa – Vũng Tàu thuộc vùng khí hậu nhiệt đới gió mùa, một năm chia hai mùa rõ rệt: <br>
+                <i class="fa fa-cloud" style="font-size:15px; color: #FF4500"></i>Tháng 5 đến tháng 10, thời gian này có gió mùa Tây Nam.
+                <br>
+            <i class="fa fa-sun-o" style="font-size:15px; color: #FF4500"></i> Tháng 11 đến tháng 4, thời gian này có gió mùa Đông Bắc. 
+            <br><i class="fa fa-thermometer-half" style="font-size:15px; color: #FF4500"></i> Nhiệt độ trung bình hàng năm là 
+                27°C, tháng thấp nhất khoảng 24,8°C, tháng cao nhất khoảng 28,6°C.
+            </span>
+                <br>
+                <br>
+            <span class="paragraph">Ở Vũng Tàu quanh năm là mùa du lịch vì nhiệt độ không khi nào quá lạnh hay quá nóng. Bạn chỉ cần theo dõi bản tin dự báo thời tiết để tránh du lịch Vũng Tàu khi có mưa bão. Ngoài ra, vào ngày cuối tuần và các dịp lễ tết, Vũng Tàu thu hút rất đông khách du lịch, giá cả các dịch vụ đều tăng cao.</span>
+                <br>
+                <br>
+            <a href="https://www.accuweather.com/en/vn/vung-tau/2-352089_1_al/weather-forecast/2-352089_1_al" style="font-size:18px"><button class="button"><span>Xem thêm </span></button></a>
+            </div>
+            <div class="hinh">
+                <!-- weather widget start --><a target="_blank" href="https://www.booked.net/weather/ba-ria-vung-tau-33806"><img style="width: 300px;" src="https://w.bookcdn.com/weather/picture/32_33806_1_1_e67e22_250_d35401_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=51995"  alt="booked.net"/></a><!-- weather widget end -->
+            </div>
+        </div>
+        <div class="noidung">
+            <div class="navbar">
+                <a href="hotel.html"><img src="images/Place.png" width="50" height="50" alt=""/></a>
+              <a href="equip.html"><img src="images/Equip.png" width="50" height="50" alt=""/></a>
+              <a href="road.html"><img src="images/road.png" width="50" height="50" alt=""/></a>
+            </div>
+        </div>
+    </div>
+    <script>
+function goBack() {
+  window.history.back();
+}
+		var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    
+    function openNav() 
+{
+  document.getElementById("mySidenav").style.width = "210px";
+  document.getElementById("main").style.marginLeft = "210px";
+}
+      
+        
+ function closeNav() 
+{
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+    </script>
+</body>
+</html>

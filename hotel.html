@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hotel</title>
+    <link href="css/hotel.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div id="main">
+      <div class="slideshow-container">
+                <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" style="border: none" onclick="closeNav()">&times;</a>
+                <a href="index.html"><i class="fa fa-home fa-fw" style="font-size:15px"></i> Trang Chủ</a>
+              <a href="info.html"><i class="fas fa-atlas fa-fw" style="font-size:15px"></i> Thông Tin Chung</a>
+                <a href="aboutus.html"><i class="fas fa-user-alt fa-fw" style="font-size:15px"></i> Về Au Go!</a>
+                <a href="tour.html"><i class="fas fa-map-signs fa-fw" style="font-size:15px"></i> Tour Du Lịch</a>
+            </div>
+        <div class="header">
+             <div class="icon-bar">
+                <a href="#"><i class="fa fa-navicon" style="font-size:20px" onClick="openNav()"></i></a> 
+                  <a class="active" href="index.html"><img src="images/logo.png" alt="" width="28" height="24"></a> 
+                  <a href="#"><i class="fa fa-arrow-left" style="font-size:20px" onclick="goBack()"></i></a>  
+            </div>
+            <div class="icon-bar2">
+                     <a class="active2" href="contact.html"><i class="fa fa-phone" style="font-size:20px"></i></a>
+                    <a href="shopping.html"><i class="fas fa-shopping-cart" style="font-size:20px"></i></a>  
+            </div>   
+            </div>
+            <div class="mySlides fade">
+			<div class="container">
+            <div class="vitri">
+                <a href="#"><i class="fa fa-angle-double-left" style="font-size:24px"></i></a> 
+                <span class="foodnav">Khách sạn</span>
+              </div>
+            <div class="infomation">
+                <br>
+            <span class="title">Malibu Hotel</span>
+                <br>
+                <br>
+            <span class="paragraph">Malibu có tổng cộng 209 phòng được bài trí trang nhã với thiết kế đẹp mắt và được trang bị vô số tiện nghi.</span>
+                <br>
+                <br>
+            <span class="paragraph">Tất cả các phòng tại Malibu Hotel đều được trang bị TV LCD HD màn hình rộng, truy cập Internet miễn phí, có phòng tắm riêng biệt và ban công.</span>
+                <br>
+                <br>
+            <span class="paragraph">
+            Địa chỉ: 263 Lê Hồng Phong, P.Thắng Tam, Thành phố Vũng Tàu<br>
+                </span>
+                <br>
+                <br>
+            <a href="https://www.malibuhotel.vn/about" style="font-size:18px"><button class="button"><span>Xem thêm </span></button></a>
+            </div>
+            <div class="hinh">
+                <img src="images/malibu.png" width="100%" height="100%" alt=""/>
+            </div>
+        </div>          
+            </div>
+            <div class="mySlides fade">
+			    <div class="container">
+                <div class="vitri">
+                <a href="#"><i class="fa fa-angle-double-left" style="font-size:24px"></i></a> 
+                <span class="foodnav">Khách sạn</span>
+                
+                </div>
+            <div class="infomation">
+                <br>
+            <span class="title">Pullman Vung Tau</span>
+                <br>
+                <br>
+            <span class="paragraph">Tiền sảnh ngập tràn ánh sáng, pha trộn giữa phong cách đương đại và bản sắc châu Á chào đón du khách đến với Pullman Vung Tau. Công trình kiến trúc mang đậm nét riêng biệt bao gồm 356 phòng nghỉ và phòng suite với tầm nhìn hướng ra biển và thành phố. </span>
+                <br>
+                <br>
+            <span class="paragraph">Thiên đường nghỉ dưỡng nhiệt đới – chỉ cách thành phố Hồ Chí Minh hai giờ lái xe và vài phút đi bộ đến Bãi Sau.</span>
+                <br>
+                <br>
+            <span class="paragraph">
+            Địa chỉ: 15 Thi Sách, P.Thắng Tam, Thành phố Vũng Tàu<br>
+              </span>
+                <br>
+                <br>
+            <a href="http://www.pullmanvungtau.com/vi/" style="font-size:18px"><button class="button"><span>Xem thêm </span></button></a>
+            </div>
+            <div class="hinh">
+            <img src="images/pullman.png" width="100%" height="100%" alt=""/>
+            </div>
+        </div>
+            </div>
+        <div class="noidung">
+            <div class="navbar">
+                <a href="hotel.html"><img src="images/Place.png" width="50" height="50" alt=""/></a>
+              <a href="equip.html"><img src="images/Equip.png" width="50" height="50" alt=""/></a>
+              <a href="road.html"><img src="images/road.png" width="50" height="50" alt=""/></a>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    </div>
+    <script>
+		function goBack() {
+  window.history.back();
+}
+		var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    
+    function openNav() 
+{
+  document.getElementById("mySidenav").style.width = "210px";
+  document.getElementById("main").style.marginLeft = "210px";
+}
+      
+        
+ function closeNav() 
+{
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+    </script>
+</body>
+</html>

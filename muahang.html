@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sản phẩm</title>
+    <link href="css/muahang.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div class="slideshow-container">
+                <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" style="border: none" onclick="closeNav()">&times;</a>
+                <a href="index.html"><i class="fa fa-home fa-fw" style="font-size:15px"></i> Trang Chủ</a>
+              <a href="info.html"><i class="fas fa-atlas fa-fw" style="font-size:15px"></i> Thông Tin Chung</a>
+                <a href="aboutus.html"><i class="fas fa-user-alt fa-fw" style="font-size:15px"></i> Về Au Go!</a>
+                <a href="tour.html"><i class="fas fa-map-signs fa-fw" style="font-size:15px"></i> Tour Du Lịch</a>
+            </div>
+        <div class="header">
+             <div class="icon-bar">
+                <a href="#"><i class="fa fa-navicon" style="font-size:20px" onClick="openNav()"></i></a> 
+                  <a class="active" href="index.html"><img src="images/logo.png" alt="" width="28" height="24"></a> 
+                  <a href="#"><i class="fa fa-arrow-left" style="font-size:20px" onclick="goBack()"></i></a>  
+            </div>
+            <div class="icon-bar2">
+                     <a class="active2" href="contact.html"><i class="fa fa-phone" style="font-size:20px"></i></a>
+                    <a href="shopping.html"><i class="fas fa-shopping-cart" style="font-size:20px"></i></a>  
+            </div>   
+        </div>
+            <div class="mySlides fade" id="banhxeo">
+			<div class="container">
+            <div class="vitri">
+                <a href="#"><i class="fa fa-angle-double-left" style="font-size:24px"></i></a> 
+                <span class="foodnav">Bưu Thiếp</span>
+                
+                </div>
+            <div class="infomation">
+                <br>
+            <span class="title">Pullman Hotel</span>
+                <br>
+                <br>
+            <span class="paragraph">
+                Giấy kĩ thuật vân ngang.<br>
+                Thiết kế đơn giản.<br>
+                </span>
+                <br>
+                <br>
+            <br>
+            <button class="button"><span>Mua</span></button>
+            </div>
+            <div class="hinh">
+                <img src="images/1.png" width="70%" height="70%" alt=""/>
+            </div>
+        </div>
+            </div>
+            <div class="mySlides fade">
+			<div class="container">
+            <div class="vitri">
+                <a href="#"><i class="fa fa-angle-double-left" style="font-size:24px"></i></a> 
+                <span class="foodnav">Bưu Thiếp</span>
+                
+                </div>
+            <div class="infomation">
+                <br>
+            <span class="title">Bánh xèo</span>
+                <br>
+                <br>
+            <span class="paragraph">
+                Giấy kĩ thuật vân ngang.<br>
+                Thiết kế đơn giản.<br>
+                </span>
+                <br>
+                <br>
+            <br>
+            <button class="button"><span>Mua</span></button>
+            </div>
+            <div class="hinh">
+                <img src="images/22.png" width="70%" height="70%" alt=""/>
+            </div>
+        </div>
+            </div>
+            <div class="mySlides fade" id="cafe">
+			<div class="container">
+            <div class="vitri">
+                <a href="#"><i class="fa fa-angle-double-left" style="font-size:24px"></i></a> 
+                <span class="foodnav">Bưu Thiếp</span>
+                
+                </div>
+            <div class="infomation">
+                <br>
+            <span class="title">Bohemiens Cafe</span>
+                <br>
+                <br>
+            <span class="paragraph">
+                Giấy kĩ thuật vân ngang.<br>
+                Thiết kế đơn giản.<br>
+                </span>
+                <br>
+                <br>
+            <br>
+            <button class="button"><span>Mua</span></button>
+            </div>
+            <div class="hinh">
+                <img src="images/3.png" width="70%" height="70%" alt=""/>
+            </div>
+        </div>
+            </div>
+                    <div class="noidung">
+            <div class="navbar">
+                <a href="hotel.html"><img src="images/Place.png" width="50" height="50" alt=""/></a>
+              <a href="equip.html"><img src="images/Equip.png" width="50" height="50" alt=""/></a>
+              <a href="road.html"><img src="images/road.png" width="50" height="50" alt=""/></a>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    </div>
+    <script>
+                		function goBack() {
+  window.history.back();
+}
+		var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    
+    function openNav() 
+{
+  document.getElementById("mySidenav").style.width = "210px";
+  document.getElementById("main").style.marginLeft = "210px";
+}        
+ function closeNav() 
+{
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+        var x, i, j, l, ll, selElmnt, a, b, c;
+/* Look for any elements with the class "custom-select": */
+x = document.getElementsByClassName("custom-select");
+l = x.length;
+for (i = 0; i < l; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  ll = selElmnt.length;
+  /* For each element, create a new DIV that will act as the selected item: */
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /* For each element, create a new DIV that will contain the option list: */
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    /* For each option in the original select element,
+    create a new DIV that will act as an option item: */
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+    /* When an item is clicked, update the original select box,
+        and the selected item: */
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+    /* When the select box is clicked, close any other select boxes,
+    and open/close the current select box: */
+    e.stopPropagation();
+    closeAllSelect(this);
+    this.nextSibling.classList.toggle("select-hide");
+    this.classList.toggle("select-arrow-active");
+  });
+}
+
+function closeAllSelect(elmnt) {
+  /* A function that will close all select boxes in the document,
+  except the current select box: */
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+
+/* If the user clicks anywhere outside the select box,
+then close all select boxes: */
+document.addEventListener("click", closeAllSelect);
+    </script>
+</body>
+</html>

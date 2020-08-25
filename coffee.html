@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Equip</title>
+    <link href="css/coffee.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div id="main">
+                <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" style="border: none" onclick="closeNav()">&times;</a>
+                <a href="index.html"><i class="fa fa-home fa-fw" style="font-size:15px"></i> Trang Chủ</a>
+              <a href="info.html"><i class="fas fa-atlas fa-fw" style="font-size:15px"></i> Thông Tin Chung</a>
+                <a href="aboutus.html"><i class="fas fa-user-alt fa-fw" style="font-size:15px"></i> Về Au Go!</a>
+                <a href="tour.html"><i class="fas fa-map-signs fa-fw" style="font-size:15px"></i> Tour Du Lịch</a>
+            </div>
+        <div class="header">
+             <div class="icon-bar">
+                <a href="#"><i class="fa fa-navicon" style="font-size:20px" onClick="openNav()"></i></a> 
+                  <a class="active" href="index.html"><img src="images/logo.png" alt="" width="28" height="24"></a> 
+                  <a href="#"><i class="fa fa-arrow-left" style="font-size:20px" onclick="goBack()"></i></a>  
+            </div>
+            <div class="icon-bar2">
+                     <a class="active2" href="contact.html"><i class="fa fa-phone" style="font-size:20px"></i></a>
+                    <a href="shopping.html"><i class="fas fa-shopping-cart" style="font-size:20px"></i></a>  
+            </div>   
+            </div>
+			<div class="container">
+            <div class="vitri">
+                <a href="#"><i class="fa fa-angle-double-left" style="font-size:24px"></i></a> 
+                <span class="foodnav">Thức uống</span>
+                
+                </div>
+            <div class="infomation">
+             <br>
+            <span class="title">Bohemiens Cafe</span>
+                <br>
+                <br>
+            <span class="paragraph">Không gian quán Bohémiens Cafe – Vũng Tàu tạo cho chúng ta một cảm giác gần gũi thân thiện. Chủ quán và nhân viên ở đây rất nhiệt tình và mến khách.</span>
+                <br>
+                <br>
+            <span class="paragraph">Thiết kế hoài cổ, phù hợp cho những bạn thích check-in, chụp ảnh sống ảo. Xung quan quán có nhiều cây xanh tạo cảm giác gần gũi với thiên nhiên. Tuy quán có không gian hơi nhỏ nhưng bù lại thì đồ uống rất ngon và tương đối đa dạng.</span>
+                <br>
+                <br>
+            <span class="paragraph">
+            Địa chỉ: Số 155/2 Ba Cu, Thành Phố Vũng Tàu<br>
+            Giờ mở cửa: 7h00 – 22h00<br>
+            Giá cả: 12.000 – 70.000 VNĐ
+                </span>
+                <br>
+                <br>
+            <a href="https://www.foody.vn/vung-tau/bohemiens-cafe-ba-cu" style="font-size:18px"><button class="button"><span>Xem thêm </span></button></a>
+            </div>
+            <div class="hinh">
+                <img src="images/bohemian coffe1.png" width="120%" height="100%" alt=""/>
+            </div>
+        </div>
+        <div class="noidung">
+            <div class="navbar">
+                <a href="hotel.html"><img src="images/Place.png" width="50" height="50" alt=""/></a>
+              <a href="equip.html"><img src="images/Equip.png" width="50" height="50" alt=""/></a>
+              <a href="road.html"><img src="images/road.png" width="50" height="50" alt=""/></a>
+            </div>
+        </div>
+    </div>
+    <script>
+function goBack() {
+  window.history.back();
+}
+		var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    
+    function openNav() 
+{
+  document.getElementById("mySidenav").style.width = "210px";
+  document.getElementById("main").style.marginLeft = "210px";
+}
+      
+        
+ function closeNav() 
+{
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+    </script>
+</body>
+</html>
